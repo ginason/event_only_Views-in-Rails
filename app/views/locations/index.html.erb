@@ -1,0 +1,20 @@
+locations#index page
+
+<!-- <h1>Locations</h1> -->
+
+<!-- <% @locations.each do |current_location| %>
+  <div class="location">
+    <h3><%= current_location.name %></h3>
+    <h4>City: <%= current_location.city %></h4>
+    <%= current_location.description %><br />
+    <%= link_to image_tag(current_location.image, class: "location"), location_path(current_location) %>
+  </div>
+<% end %> -->
+<h1>Location Only</h1>
+<p>
+  <%= link_to 'New Location', new_location_path %>
+</p>
+<% @locations.each do |current_location| %>
+<%= render 'single_location', location: current_location, show_name: true %>
+<%= render 'location_form', location: current_location %>
+<% end %>

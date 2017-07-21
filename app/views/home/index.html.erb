@@ -1,0 +1,13 @@
+
+<p>
+  <%= link_to 'View Locations', locations_path %>
+  <% @locations.each do |current_location| %>
+  <%= render 'locations/single_location', location: current_location %>
+  <% end %>
+</p>
+<p>
+  <%= link_to 'Events', events_path %>
+  <% @events.each do |current_event| %>
+  <%= render 'events/single_event', event: current_event %>
+  <% end %>
+</p>

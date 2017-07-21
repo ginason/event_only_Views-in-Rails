@@ -1,0 +1,5 @@
+events#show page
+<h1><%= @event.name %></h1>
+
+<%= render 'single_event', event: @event %>
+<%= link_to 'Edit', edit_event_path(@event) %> | <%= link_to 'Delete', event_path(@event), method: :delete, data: {confirm: "please double check before you delete the event '#{@event.name}'?"} %>

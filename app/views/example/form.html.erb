@@ -1,0 +1,28 @@
+example@form page
+
+<%= form_tag "/example/form" do %>
+<div>
+  Full name <br>
+<%= text_field_tag :full_name %>
+</div>
+<div>
+  Phone <br>
+  <%= text_field_tag :phone %>
+</div>
+<div>
+  Hobby <br>
+  <%= text_field_tag :hobby %>
+</div>
+<div>
+  Years Experience <br>
+  <%= number_field_tag :years_experience %>
+</div>
+<div>
+  Available date <br>
+  <%= date_field_tag :available_date %>
+</div>
+<div>
+  <%= submit_tag %>
+</div>
+</form>
+<% end %>
